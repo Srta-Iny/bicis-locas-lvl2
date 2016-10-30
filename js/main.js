@@ -83,8 +83,8 @@ function validateForm(){
 	}
 
 	//validando seleccion de bicicleta 
-	var bici = document.getElementsByTagName('select').selectedIndex;
-	var biciContainer = document.getElementsByTagName('select').parentNode;
+	var bici = document.getElementsByTagName('select')[0].value;
+	var biciContainer = document.getElementsByTagName('select')[0].parentNode;
 	var errorBici = document.createElement('span');
 	if( bici == null || bici == 0 ) {
 		mensajeAlerta = document.createTextNode('Por favor selecciona tu bicicleta');
@@ -94,7 +94,7 @@ function validateForm(){
 	}
 	//validando informacion adicional
 	var masInfo= document.querySelector(".checkbox span");
-	if( !elemento.checked ) {
+	if( !masInfo.checked ) {
 		return false;
 	}
 }
