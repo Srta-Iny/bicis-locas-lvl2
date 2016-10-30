@@ -97,4 +97,5 @@ function validateForm(){
 	if( !masInfo.checked ) {
 		return false;
 	}
+	return true;
 }
